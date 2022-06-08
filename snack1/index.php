@@ -14,19 +14,19 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php
 $match_array = [
-    "match_1" => [
+    [
         "home_team" => "Milano",
         "visiting_team" => "Genova",
         "score_home_team" => "80",
         "score_visiting_team" => "32",
     ],
-    "match_3" => [
+    [
         "home_team" => "Roma",
         "visiting_team" => "Lecce",
         "score_home_team" => "76",
         "score_visiting_team" => "89",
     ],
-    "match_3" => [
+    [
         "home_team" => "Ancona",
         "visiting_team" => "Cagliari",
         "score_home_team" => "23",
@@ -37,11 +37,22 @@ $match_array = [
 
 
 
+
+
 <?php
-for ($i = 0; $i = count($match_array); $i++) {
-    $single_match = $match_array[$i];
-    echo "<h1>$single_match["home_team"] . - . $single_match["visiting_team"]. | .$single_match["score_home_team"].-. .$single_match["score_visiting_team"] </h1>";
+for ($i = 0; $i < count($match_array); $i++) {
+    ?>
+    <h1>
+    <?php
+            $single_match = $match_array[$i];
+
+            echo $single_match['home_team'] . " - " . $single_match['visiting_team'] . " | " . $single_match['score_home_team'] . " - " . $single_match['score_visiting_team'];
+            
+        ?>
+    </h1>
+    <?php
 }
+
 ?>
 
 </body>

@@ -21,19 +21,26 @@ $array = [
         "Photo_mountain",
         "visiting_Monte_bianco",
     ],
-    "01-01-2007" => [
+    "01-01-2027" => [
         "Photo_river",
         "cat_vibe",
     ],
 ];
 
-for ($i = 0; $i = count($array); $i++) {
-    $single_post = $array[$i];
-    echo "<h1>Post del .$single_post</h1> <br>";
+$arrayKeys = array_keys($array);
 
-    for ($i = 0; $i = count($single_post); $i++)
-        $date_posts = $singlepost[$i];
+for ($i = 0; $i < count($array); $i++) {
+    $single_key = $arrayKeys[$i];
+    $single_post = $array[$single_key];
+
+    
+    echo "<h1>Post del $single_key</h1> <br>";
+
+
+    for ($j = 0; $j < count($single_post); $j++) {
+        $date_posts = $single_post[$j];
         echo "<h2>$date_posts</h2>";
+    }
 }
 ?>
 
