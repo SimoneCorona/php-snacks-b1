@@ -33,9 +33,7 @@ for ($i = 0; $i < count($array); $i++) {
     $single_key = $arrayKeys[$i];
     $single_post = $array[$single_key];
 
-    
     echo "<h1>Post del $single_key</h1> <br>";
-
 
     for ($j = 0; $j < count($single_post); $j++) {
         $date_posts = $single_post[$j];

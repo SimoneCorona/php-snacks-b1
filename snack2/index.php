@@ -19,8 +19,12 @@ $age=$_GET['age'];
 $chiocciola_mail = strpos($mail, "@");
 $point_mail = strpos($mail, ".");
 
-if( strlen($name) < 3 || $chiocciola_mail === false || $point_mail === false || is_nan($age) === true)
-    echo "<h1>“Accesso negato”</h1>";
+if( strlen($name) < 3 && 
+    $chiocciola_mail === false && 
+    $point_mail === false && 
+    is_nan($age) === true)
+    
+        echo "<h1>“Accesso negato”</h1>";
 else {
     echo "<h1>“Accesso riuscito”</h1>";
 }

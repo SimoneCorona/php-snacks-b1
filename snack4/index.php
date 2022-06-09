@@ -17,12 +17,9 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 while(count($array_num) < 15){
     $number= rand(0,100);
     
-    if(in_array($number, $array_num)) {
-
-    } else {
-        $array_num[] += $number;
-    }
-    
+    if(!in_array($number, $array_num)) {
+         $array_num[] = $number;
+    } 
 }
 
 for ($i = 0; $i < count($array_num); $i++) {
